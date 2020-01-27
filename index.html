@@ -12,6 +12,8 @@
     margin-right: 140px;
 		text-align:center;
     background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    cursor: none;
 	}
   .bio {
     
@@ -44,7 +46,7 @@
   .social {
     margin-top: -1.0vw;
   }
-  .social button{
+  .social a.button{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -52,10 +54,35 @@
     color: white;
     margin-left: 3px;
   }
-  .social button:hover{
+  .social a.button:hover{
     background-color: white;
     border: 3px solid black;
     color: black;
+  }
+  #cursor {
+    position: absolute;
+    width:20px;
+    height:20px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  h1:hover ~ #cursor {
+    width: 200px;
+    height: 200px;
+    border: 5px dashed #000;
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate{
+    0%{
+      transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+      transform: translate(-50%,-50%) rotate(360deg);
+    }
   }
 </style>
 <html>
@@ -63,34 +90,36 @@
     <title>Noppanat Panlutan</title>
   </head>
   <div class="my-profile">
+  
     <div class="bio">
       <div class="row justify-content-end">
         <div class="col-5">
           <div class="row">
             <div class="col-12">
               <h1 class="greeting">Hi there I'm Ton</h1>
+              <div id="cursor"></div>
               <p class="description">Creative Art & Web Developer</b></p>           
             </div>
           </div>
           <div class="row">
             <div class="social col-3">
               <div class="justify-content-start">
-                <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f"></i></button>
-                <button type="button" class="btn btn-fb"><i class="fab fa-twitter"></i></button>
-                <button type="button" class="btn btn-fb"><i class="fab fa-instagram"></i></button>
+                <a href="https://www.facebook.com/ton.noppanat.7" type="button" class="button btn btn-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/Noppana45983023" type="button" class="button btn btn-fb"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/tonsonpa/" type="button" class="button btn btn-fb"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-6">
-              <button class="see-my-work btn btn-dark justify-content-start">See my Work</button>
+              <a href="https://github.com/Noppanat1997" class="see-my-work btn btn-dark justify-content-start">See my Work</a>
             </div>
           </div>
         </div>
         <div class="col-6">
           <div class="row">
             <div class="col-12">
-              <img class="profile-img" src="./img/1-bw-png.png">
+              <img id="profileImg" class="profile-img" src="./img/1-bw-png.png">
             </div>
           </div>
         </div>
@@ -99,7 +128,16 @@
 
       </div>
     </div>
-  </div>  
     
+  </div>  
   </div>
+  <script>
+    var cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', function(e){
+      var x = e.clientX;
+      var y = e.clientY;
+      cursor.style.left = x + "px";
+      cursor.style.top = y + "px";
+    })
+  </script>
 </html>
