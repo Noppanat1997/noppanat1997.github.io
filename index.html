@@ -1,22 +1,104 @@
 <!doctype html>
-<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+<style>
+  .my-profile {
+    margin-left: 140px;
+    margin-right: 140px;
+		text-align:center;
+    background-color: rgb(255, 255, 255);
+	}
+  .bio {
+    
+  }
+  .greeting {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.9vw; 
+    font-weight: bold;
+    max-width: 100%; 
+    margin-top: 16vw;
+  }
+  .description{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6vw;
+    font-weight: normal;
+    max-width: 100%; 
+    margin-top: -1.5vw;
+  }
+  .see-my-work{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vw;
+    font-weight: lighter;
+    max-width: 100%; 
+    margin-top: 6vw;
+  }
+  .profile-img{
+    margin-top: 40px;
+    max-width: 100%; 
+  }
+  .social {
+    margin-top: -1.0vw;
+  }
+  .social button{
+    width: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+  }
+  .social button:hover{
+    width: 40px;
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+  }
+</style>
+<html>
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <title>Noppanat Panlutan</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <div class="my-profile">
+    <div class="bio">
+      <div class="row justify-content-end">
+        <div class="col-5">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="greeting">Hi there I'm Ton</h1>
+              <p class="description">Creative Art & Web Developer</b></p>           
+            </div>
+          </div>
+          <div class="row">
+            <div class="social col-3">
+              <div class="justify-content-start">
+                <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f"></i></button>
+                <button type="button" class="btn btn-fb"><i class="fab fa-twitter"></i></button>
+                <button type="button" class="btn btn-fb"><i class="fab fa-instagram"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <button class="see-my-work btn btn-dark justify-content-start">See my Work</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <img class="profile-img" src="./img/1-bw-png.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      </div>
+    </div>
+  </div>  
+    
+  </div>
 </html>
