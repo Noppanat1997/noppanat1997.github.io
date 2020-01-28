@@ -7,13 +7,17 @@
 <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
 <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
 <style>
+  body {
+    clip-path: circle(1000px at var(--x) var(--y));
+  }
   .my-profile {
     margin-left: 140px;
     margin-right: 140px;
 		text-align:center;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
-    cursor: none;
+    height: 100vh;
+    /* cursor: none; */
 	}
   .bio {
     
@@ -59,46 +63,20 @@
     border: 3px solid black;
     color: black;
   }
-  #cursor {
-    position: absolute;
-    width:20px;
-    height:20px;
-    border: 2px solid #000;
-    box-sizing: border-box;
-    transition: 0.1s;
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  h1:hover ~ #cursor {
-    width: 200px;
-    height: 200px;
-    border: 5px dashed #000;
-    animation: animate 5s linear infinite;
-  }
-  @keyframes animate{
-    0%{
-      transform: translate(-50%,-50%) rotate(0deg);
-    }
-    100%{
-      transform: translate(-50%,-50%) rotate(360deg);
-    }
-  }
 </style>
 <html>
   <head>
     <title>Noppanat Panlutan</title>
   </head>
+  <body>
   <div class="my-profile">
-  
     <div class="bio">
       <div class="row justify-content-end">
         <div class="col-5">
           <div class="row">
             <div class="col-12">
               <h1 class="greeting">Hi there I'm Ton</h1>
-              <div id="cursor"></div>
-              <p class="description">Creative Art & Web Developer</b></p>           
+              <p class="description">Creative Art & Web Developer</p>           
             </div>
           </div>
           <div class="row">
@@ -119,25 +97,22 @@
         <div class="col-6">
           <div class="row">
             <div class="col-12">
-              <img id="profileImg" class="profile-img" src="./img/1-bw-png.png">
+              <img id="profileImg" class="profile-img" src="./img/1-png.png">
+              <script type="text/javascript">
+                var pos = document.documentElement;
+                pos.addEventListener("mousemove", e => {
+                  pos.style.setProperty('--x', e.clientX + "px");
+                  pos.style.setProperty('--y', e.clientY + "px");
+                })
+              </script>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
 
-      </div>
     </div>
     
   </div>  
   </div>
-  <script>
-    var cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursor.style.left = x + "px";
-      cursor.style.top = y + "px";
-    })
-  </script>
+  </body> 
 </html>
